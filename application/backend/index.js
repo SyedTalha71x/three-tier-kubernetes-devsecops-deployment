@@ -11,8 +11,6 @@ app.use(express.json());
 app.use(cors());
 
 // Health check endpoints
-
-// Basic health check to see if the server is running
 app.get('/healthz', (req, res) => {
     res.status(200).send('Healthy');
 });
