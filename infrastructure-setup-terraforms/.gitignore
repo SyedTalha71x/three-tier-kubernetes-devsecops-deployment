@@ -1,26 +1,31 @@
+# Ignore text files (optional, remove if you want to push docs)
 *.txt
 
-# Ignore all Terraform files
-*.tf
-*.tf.json
+# ✅ Allow Terraform configuration files
+# (main.tf, variables.tf, outputs.tf, providers.tf, etc.)
+!*.tf
+
+# ❌ Ignore only sensitive/private Terraform files
 *.tfvars
 *.tfstate
 *.tfstate.*
 *.tfplan
 
-# Ignore Terraform directories
+# Ignore Terraform working directory
 .terraform/
+
+# Ignore lock file (auto-generated)
 .terraform.lock.hcl
 
 # Ignore crash logs
 crash.log
 crash.*.log
 
-# Ignore override files (local customizations)
+# Ignore local overrides
 override.tf
 override.tf.json
 *_override.tf
 *_override.tf.json
 
-# Ignore local environment variables
+# Ignore local environment variable files
 terraform.tfvars.json
